@@ -1,0 +1,159 @@
+.theme-squid {
+    --syntax-background: rgba(0, 0, 0, 0.5);
+    --syntax-text: #000000;
+    --syntax-string: #ffffff;
+    --syntax-comment: #8c8f7a;
+    --syntax-variable: #00d9ff; /** js variable */
+    --syntax-variable-2: #f700ff; /** php variable */
+    --syntax-variable-3: #ad75ee;
+    --syntax-number: #55e7b2;
+    --syntax-atom: #55e7b2;
+    --syntax-keyword: #bbff43; /** return, function name vb. */
+    --syntax-property: #49e8f2;
+    --syntax-definition: #00f3ff;
+    --syntax-meta: #6599ff;
+    --syntax-operator: #fff; /** operatör */
+    --syntax-attribute: #ff005d;
+    --syntax-tag: #6599ff;
+    --syntax-builtin: #00f3ff; /** fonksiyon */
+    --syntax-selected: rgba(203, 128, 203, 0.2);
+    --syntax-qualifier: #d8ff6e; /** css seçici */
+    --syntax-error: #ff005d;
+    @apply bg-gradient-to-bl from-blue-400 via-purple-800 to-pink-700 rounded-md;
+}
+
+html[class='dark'] .theme-squid {
+    --syntax-text: #ffffff;
+}
+
+.theme-squid .copytext {
+    @apply text-white;
+}
+
+.theme-squid .CodeMirror .line-blur {
+    @apply filter blur-xs;
+}
+
+.theme-squid .CodeMirror .line-draw {
+    border-bottom: 2px solid var(--syntax-variable-2);
+}
+
+.theme-squid .CodeMirror {
+    background: var(--syntax-background);
+    color: var(--syntax-text);
+    font-size: 15px;
+    line-height: 1.5;
+    @apply h-auto rounded-b-md p-5 shadow-2xl;
+}
+
+.theme-squid .CodeMirror-gutters {
+    background: none;
+    border: none;
+}
+
+.theme-squid .CodeMirror-guttermarker,
+.theme-squid .CodeMirror-guttermarker-subtle,
+.theme-squid .CodeMirror-linenumber {
+    color: var(--syntax-comment);
+    padding: 0 10px 0 0;
+}
+
+.theme-squid .CodeMirror-cursor {
+    border-left: 1px solid var(--syntax-text);
+}
+
+.theme-squid .cm-fat-cursor,
+.theme-squid .cm-animate-fat-cursor {
+    background-color: var(--syntax-selected);
+}
+
+.theme-squid div.CodeMirror-selected,
+.theme-squid .CodeMirror-focused div.CodeMirror-selected,
+.theme-squid .CodeMirror-line::selection,
+.theme-squid .CodeMirror-line > span::selection,
+.theme-squid .CodeMirror-line > span > span::selection,
+.theme-squid .CodeMirror-line::-moz-selection,
+.theme-squid .CodeMirror-line > span::-moz-selection,
+.theme-squid .CodeMirror-line > span > span::-moz-selection,
+.theme-squid .CodeMirror-activeline-background {
+    background: var(--syntax-selected);
+}
+
+.theme-squid .cm-keyword {
+    color: var(--syntax-keyword);
+}
+
+.theme-squid .cm-operator {
+    color: var(--syntax-operator);
+}
+
+.theme-squid .cm-variable {
+    color: var(--syntax-variable);
+}
+
+.theme-squid .cm-variable-2 {
+    color: var(--syntax-variable-2);
+}
+
+.theme-squid .cm-variable-3,
+.cm-type {
+    color: var(--syntax-variable-3);
+}
+
+.theme-squid .cm-builtin {
+    color: var(--syntax-builtin);
+}
+
+.theme-squid .cm-atom {
+    color: var(--syntax-atom);
+}
+
+.theme-squid .cm-number {
+    color: var(--syntax-number);
+}
+
+.theme-squid .cm-def {
+    color: var(--syntax-definition);
+}
+
+.theme-squid .cm-string {
+    color: var(--syntax-string);
+}
+
+.theme-squid .cm-string-2 {
+    color: var(--syntax-string);
+}
+
+.theme-squid .cm-comment {
+    color: var(--syntax-comment);
+}
+
+.theme-squid .cm-tag {
+    color: var(--syntax-tag);
+}
+
+.theme-squid .cm-meta {
+    color: var(--syntax-meta);
+}
+
+.theme-squid .cm-attribute {
+    color: var(--syntax-attribute);
+}
+
+.theme-squid .cm-property {
+    color: var(--syntax-property);
+}
+
+.theme-squid .cm-qualifier {
+    color: var(--syntax-qualifier);
+}
+
+.theme-squid .cm-error {
+    color: var(--syntax-text);
+    background-color: var(--syntax-error);
+}
+
+.theme-squid .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: var(--syntax-text);
+}

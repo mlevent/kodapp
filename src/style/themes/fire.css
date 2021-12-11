@@ -1,0 +1,154 @@
+.theme-fire {
+    --syntax-background: rgba(0, 0, 0, 0.75);
+    --syntax-text: #000000;
+    --syntax-string: #ffffff;
+    --syntax-comment: #8c8f7a;
+    --syntax-variable: #00d9ff; /** js variable */
+    --syntax-variable-2: #00ff73; /** php variable */
+    --syntax-variable-3: #9aec7d;
+    --syntax-number: #55e7b2;
+    --syntax-atom: #55e7b2;
+    --syntax-keyword: #ffa53d; /** return, function name vb. */
+    --syntax-property: #49e8f2;
+    --syntax-definition: #00d9ff;
+    --syntax-meta: #6599ff;
+    --syntax-operator: #a27aff; /** operatör */
+    --syntax-attribute: #ff005d;
+    --syntax-tag: #6599ff;
+    --syntax-builtin: #d8ff6e; /** fonksiyon */
+    --syntax-selected: rgba(128, 203, 196, 0.2);
+    --syntax-qualifier: #d8ff6e; /** css seçici */
+    --syntax-error: #ff005d;
+    @apply bg-gradient-to-bl from-yellow-400 via-green-500 to-yellow-300 rounded-md;
+}
+
+html[class='dark'] .theme-fire {
+    --syntax-text: #ffffff;
+}
+
+.theme-fire .CodeMirror .line-blur {
+    @apply filter blur-xs;
+}
+
+.theme-fire .CodeMirror .line-draw {
+    border-bottom: 1px solid var(--syntax-string);
+}
+
+.theme-fire .CodeMirror {
+    color: var(--syntax-text);
+    font-size: 15px;
+    line-height: 1.5;
+    @apply h-auto rounded-b-md p-5 shadow-2xl bg-gradient-to-br from-white to-white dark:from-gray-800 dark:to-black;
+}
+
+.theme-fire .CodeMirror-gutters {
+    background: none;
+    border: none;
+}
+
+.theme-fire .CodeMirror-guttermarker,
+.theme-fire .CodeMirror-guttermarker-subtle,
+.theme-fire .CodeMirror-linenumber {
+    color: var(--syntax-comment);
+    padding: 0 10px 0 0;
+}
+
+.theme-fire .CodeMirror-cursor {
+    border-left: 1px solid var(--syntax-text);
+}
+
+.theme-fire .cm-fat-cursor,
+.theme-fire .cm-animate-fat-cursor {
+    background-color: var(--syntax-selected);
+}
+
+.theme-fire div.CodeMirror-selected,
+.theme-fire .CodeMirror-focused div.CodeMirror-selected,
+.theme-fire .CodeMirror-line::selection,
+.theme-fire .CodeMirror-line > span::selection,
+.theme-fire .CodeMirror-line > span > span::selection,
+.theme-fire .CodeMirror-line::-moz-selection,
+.theme-fire .CodeMirror-line > span::-moz-selection,
+.theme-fire .CodeMirror-line > span > span::-moz-selection,
+.theme-fire .CodeMirror-activeline-background {
+    background: var(--syntax-selected);
+}
+
+.theme-fire .cm-keyword {
+    color: var(--syntax-keyword);
+}
+
+.theme-fire .cm-operator {
+    color: var(--syntax-operator);
+}
+
+.theme-fire .cm-variable {
+    color: var(--syntax-variable);
+}
+
+.theme-fire .cm-variable-2 {
+    color: var(--syntax-variable-2);
+}
+
+.theme-fire .cm-variable-3,
+.cm-type {
+    color: var(--syntax-variable-3);
+}
+
+.theme-fire .cm-builtin {
+    color: var(--syntax-builtin);
+}
+
+.theme-fire .cm-atom {
+    color: var(--syntax-atom);
+}
+
+.theme-fire .cm-number {
+    color: var(--syntax-number);
+}
+
+.theme-fire .cm-def {
+    color: var(--syntax-definition);
+}
+
+.theme-fire .cm-string {
+    color: var(--syntax-string);
+}
+
+.theme-fire .cm-string-2 {
+    color: var(--syntax-string);
+}
+
+.theme-fire .cm-comment {
+    color: var(--syntax-comment);
+}
+
+.theme-fire .cm-tag {
+    color: var(--syntax-tag);
+}
+
+.theme-fire .cm-meta {
+    color: var(--syntax-meta);
+}
+
+.theme-fire .cm-attribute {
+    color: var(--syntax-attribute);
+}
+
+.theme-fire .cm-property {
+    color: var(--syntax-property);
+}
+
+.theme-fire .cm-qualifier {
+    color: var(--syntax-qualifier);
+}
+
+.theme-fire .cm-error {
+    color: var(--syntax-text);
+    background-color: var(--syntax-error);
+}
+
+.theme-fire .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: var(--syntax-text);
+}

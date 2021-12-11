@@ -1,0 +1,159 @@
+.theme-matrix {
+    --syntax-background: rgba(0, 0, 0, 0.75);
+    --syntax-text: #08fd00;
+    --syntax-string: #08fd00;
+    --syntax-comment: #8a757d;
+    --syntax-variable: #08fd00;
+    --syntax-variable-2: #08fd00;
+    --syntax-variable-3: #9aec7d;
+    --syntax-number: #08fd00;
+    --syntax-atom: #08fd00;
+    --syntax-keyword: #08fd00;
+    --syntax-property: #08fd00;
+    --syntax-definition: #08fd00;
+    --syntax-meta: #08fd00;
+    --syntax-operator: #08fd00;
+    --syntax-attribute: #08fd00;
+    --syntax-tag: #08fd00;
+    --syntax-builtin: #08fd00;
+    --syntax-selected: rgba(128, 203, 196, 0.2);
+    --syntax-qualifier: #08fd00; /** css seçici */
+    --syntax-error: #f8518d;
+    @apply bg-gradient-to-tr from-gray-900 to-black rounded-md;
+}
+
+.theme-matrix .copytext {
+    @apply text-white;
+}
+
+.theme-matrix .CodeMirror {
+    color: var(--syntax-text);
+    font-size: 15px;
+    line-height: 1.5;
+    @apply h-auto rounded-b-md p-5 bg-gradient-to-br from-white to-white dark:from-gray-800 dark:to-black;
+}
+
+.theme-matrix .CodeMirror-gutters {
+    background: none;
+    border: none;
+}
+
+.theme-matrix .CodeMirror-guttermarker,
+.theme-matrix .CodeMirror-guttermarker-subtle,
+.theme-matrix .CodeMirror-linenumber {
+    color: var(--syntax-comment);
+    padding: 0 10px 0 0;
+}
+
+.theme-matrix .CodeMirror-cursor {
+    border-left: 1px solid var(--syntax-text);
+}
+.theme-matrix.cm-fat-cursor .CodeMirror-cursor {
+    background-color: var(--syntax-selected);
+}
+.theme-matrix .cm-animate-fat-cursor {
+    background-color: var(--syntax-selected);
+}
+
+.theme-matrix div.CodeMirror-selected {
+    background: var(--syntax-selected);
+}
+
+.theme-matrix.CodeMirror-focused div.CodeMirror-selected {
+    background: var(--syntax-selected);
+}
+
+.theme-matrix .CodeMirror-line::selection,
+.theme-matrix .CodeMirror-line > span::selection,
+.theme-matrix .CodeMirror-line > span > span::selection {
+    background: var(--syntax-selected);
+}
+
+.theme-matrix .CodeMirror-line::-moz-selection,
+.theme-matrix .CodeMirror-line > span::-moz-selection,
+.theme-matrix .CodeMirror-line > span > span::-moz-selection {
+    background: var(--syntax-selected);
+}
+
+.theme-matrix .CodeMirror-activeline-background {
+    background: var(--syntax-selected);
+}
+
+.theme-matrix .cm-keyword {
+    color: var(--syntax-keyword);
+}
+
+.theme-matrix .cm-operator {
+    color: var(--syntax-operator);
+}
+
+.theme-matrix .cm-variable {
+    color: var(--syntax-variable);
+}
+
+.theme-matrix .cm-variable-2 {
+    color: var(--syntax-variable-2);
+}
+
+.theme-matrix .cm-variable-3,
+.theme-matrix .cm-type {
+    color: var(--syntax-variable-3);
+}
+
+.theme-matrix .cm-builtin {
+    color: var(--syntax-builtin);
+}
+
+.theme-matrix .cm-atom {
+    color: var(--syntax-atom);
+}
+
+.theme-matrix .cm-number {
+    color: var(--syntax-number);
+}
+
+.theme-matrix .cm-def {
+    color: var(--syntax-definition);
+}
+
+.theme-matrix .cm-string {
+    color: var(--syntax-string);
+}
+
+.theme-matrix .cm-string-2 {
+    color: var(--syntax-string);
+}
+
+.theme-matrix .cm-comment {
+    color: var(--syntax-comment);
+}
+
+.theme-matrix .cm-tag {
+    color: var(--syntax-tag);
+}
+
+.theme-matrix .cm-meta {
+    color: var(--syntax-meta);
+}
+
+.theme-matrix .cm-attribute {
+    color: var(--syntax-attribute);
+}
+
+.theme-matrix .cm-property {
+    color: var(--syntax-property);
+}
+
+.theme-matrix .cm-qualifier {
+    color: var(--syntax-qualifier);
+}
+
+.theme-matrix .cm-error {
+    color: var(--syntax-text);
+    background-color: var(--syntax-error);
+}
+
+.theme-matrix .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: var(--syntax-text);
+}

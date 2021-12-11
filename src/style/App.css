@@ -1,0 +1,12 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './Style.css';
+@import 'codemirror/lib/codemirror.css';
+@import 'themes/fire.css';
+@import 'themes/matrix.css';
+@import 'themes/squid.css';
+/*@import 'codemirror/theme/material.css';
+@import 'codemirror/theme/xq-light.css';*/
